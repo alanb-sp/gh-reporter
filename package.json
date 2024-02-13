@@ -1,0 +1,29 @@
+{
+  "name": "gh-reporter",
+  "version": "0.0.1",
+  "description": "generates a GH report of the last PR activitity on a repo, it sends the report ot an email address.",
+  "main": "index.mjs",
+  "type": "module",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aoeu/gh-reporter.git"
+  },
+  "author": "Alan Bautista",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aoeu/gh-reporter/issues"
+  },
+  "homepage": "https://github.com/aoeu/gh-reporter#readme",
+  "dependencies": {
+    "@octokit/rest": "^20.0.2",
+    "nodemailer": "^6.9.9"
+  },
+  "devDependencies": {
+  }
+}

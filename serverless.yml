@@ -1,0 +1,25 @@
+service: github-reporter
+
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+
+functions:
+  gh-reporter:
+    handler: index.handler
+    environment:
+      ghOrganization: ''
+      ghRepository: ''
+      emailFrom : ''
+      emailTo: ''
+    events:
+      - schedule: cron(0 7 ? * MON *)
+	
+package:
+  patterns:
+    - '!.env'
+    - '!test/**'
+    - '!.git/**'
